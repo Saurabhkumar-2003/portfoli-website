@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Saurabh Kr Mishra — Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <canvas id="bg"></canvas>
+
+    <div id="app">
+        <p class="hero-name"><span id="typed-name"></span><span class="typed-cursor" id="typed-cursor"></span></p>
+        <p class="hero-sub">B.Tech CSE Student · Uttaranchal University</p>
+
+        <nav class="dock">
+            <button class="dock-btn active" id="btn-about" onclick="openPanel('about')">
+                <div class="dot"></div>
+                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span class="btn-label">About</span>
+            </button>
+            <button class="dock-btn" id="btn-education" onclick="openPanel('education')">
+                <div class="dot"></div>
+                <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                <span class="btn-label">Edu & Skills</span>
+            </button>
+            <button class="dock-btn" id="btn-projects" onclick="openPanel('projects')">
+                <div class="dot"></div>
+                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="7" height="7" rx="1.5"/><rect x="15" y="3" width="7" height="7" rx="1.5"/><rect x="2" y="14" width="7" height="7" rx="1.5"/><rect x="15" y="14" width="7" height="7" rx="1.5"/></svg>
+                <span class="btn-label">Projects</span>
+            </button>
+            <button class="dock-btn" id="btn-contact" onclick="openPanel('contact')">
+                <div class="dot"></div>
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span class="btn-label">Contact</span>
+            </button>
+        </nav>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-name">Saurabh Kr Mishra</div>
+        <div class="footer-desc">Computer Science Engineering Student | Batch 2023 - 2027</div>
+    </footer>
+
+    <div class="panel-overlay" id="overlay" onclick="handleOverlayClick(event)">
+        <div class="panel" id="panel">
+            <button class="close-btn" onclick="closePanel()">✕</button>
+            <div id="panel-content"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
